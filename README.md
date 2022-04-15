@@ -1,8 +1,6 @@
-<h2> Repositorio para armazenar scripts </h2>
+<h2> Script Repository </h2>
 
-Este repositorio possui scripts usados para brincar e estudar, como forma de interação e automação do sistema.
+This repository is used to store scripts to play and study, as are the forms of interaction and automation in the Linux system.
 
-<li> playshell.sh
-Tem como função demonstrar o uso básico de principais comandos e utilizações no Shell Script.
-</li>
+<li><h4> playshell.sh</h4> ➵ Tem como função demonstrar o uso básico de principais comandos e utilizações no Shell Script. </li>
 
