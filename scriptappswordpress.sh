@@ -1,33 +1,33 @@
 #!/bin/bash
 
-echo "Atualizando os repositorios do sistema"
+echo "Updating system repositories"
 sleep 3
 apt-get update
 echo " "
 
-echo "Instalando pacote do Nginx"
-echo "Aguarde..."
+echo "Installing Nginx package"
+echo "Wait..."
 sleep 3
 apt-get install -y nginx
 systemctl start nginx
-echo "O serviço foi instalado e iniciado "
+echo "The service has been installed and started"
 echo " "
 
-echo "Instalando pacote do Docker"
-echo "Aguarde..."
+echo "Installing Docker package"
+echo "Wait..."
 sleep 3
 apt-get install -y docker.io
 echo " "
 
 echo "Instalando pacote do Curl"
-echo "Aguarde..."
+echo "Wait..."
 sleep 3
 apt-get install -y curl
 echo " "
 
 
-echo "Instalando pacote do Docker-Compose"
-echo "Aguarde..."
+echo "Installing Docker-Compose package"
+echo "Wait..."
 curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
 chmod +x /usr/local/bin/docker-compose
@@ -35,7 +35,7 @@ chmod +x /usr/local/bin/docker-compose
 ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 echo " "
 
-echo "Realizando insercao de dados nos arquivos de configuracao do Nginx."
+echo "Insert data into Nginx configuration files."
 sleep 3
 
 declare -a arr=([1]="blog.devops.com.br" "app.devops.com.br")
@@ -95,17 +95,17 @@ EOF
 done
 
 nginx -t && systemctl reload nginx
-  echo "Arquivo de configuracao verificado."
-  echo "Servico reinicializado para a aplicacao das alteracoes."
+  echo "Verified configuration file."
+  echo "Service restarted to apply changes."
 echo " "
 
-echo "Subindo container dos Apps"
+echo "Uploading Apps container"
 docker-compose up -d
 echo " "
 
-echo "Estes sao os containers disponiveis para acesso: "
+echo "These are the containers available for access: "
 docker-compose ps
 echo " "
 
-echo "Verifique o dominio do APP desejado atraves do navegador!"
+echo "Check the desired APP domain through the browser!"
 

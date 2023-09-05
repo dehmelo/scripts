@@ -1,6 +1,6 @@
 #!/bin/bash
 
-read -p 'Digite a senha do root: ' -s -r PASSWD
+read -p 'Enter the root password: ' -s -r PASSWD
 
 sudo apt install -y wget vim git neofetch
 
