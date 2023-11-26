@@ -19,7 +19,7 @@ sleep 3
 apt-get install -y docker.io
 echo " "
 
-echo "Instalando pacote do Curl"
+echo "Installing Curl package"
 echo "Wait..."
 sleep 3
 apt-get install -y curl
